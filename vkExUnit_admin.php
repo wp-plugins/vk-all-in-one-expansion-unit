@@ -67,6 +67,42 @@
 				</div><!-- [ /.plugin-description ] -->
 			</td>
 		</tr>
+		
+		<!-- [ active_wpTitle ] -->
+		<tr<?php echo (isset($options['active_wpTitle']) && $options['active_wpTitle'])? ' class="active"': ' class="inactive"'; ?>>
+			<th scope='row' class='check-column'>
+				<label class='screen-reader-text' for='checkbox_active_wpTitle' >
+				<?php _e('Choose Rewrite the print title tag', 'vkExUnit'); ?>
+				</label>
+				<input type="checkbox" name="vkExUnit_common_options[active_wpTitle]" id="checkbox_aactive_wpTitle" value="true" <?php echo (isset($options['active_wpTitle']) && $options['active_wpTitle'])? 'checked': ''; ?> />
+			</th>
+			<td class='plugin-title'>
+				<strong><?php _e('Rewrite the print title tag', 'vkExUnit'); ?></strong>
+			</td>
+			<td class='column-description desc'>
+				<div class='plugin-description'>
+					<p><?php _e('Print is rewritten by its own rules to html head.', 'vkExUnit'); ?></p>
+				</div><!-- [ /.plugin-wpTitle ] -->
+			</td>
+		</tr>
+
+		<!-- [ active_metaKeyword ] -->
+		<tr<?php echo (isset($options['active_metaKeyword']) && $options['active_metaKeyword'])? ' class="active"': ' class="inactive"'; ?>>
+			<th scope='row' class='check-column'>
+				<label class='screen-reader-text' for='checkbox_active_metaKeyword' >
+				<?php _e('Choose Print meta Keyword.', 'vkExUnit'); ?>
+				</label>
+				<input type="checkbox" name="vkExUnit_common_options[active_metaKeyword]" id="checkbox_active_metaKeyword" value="true" <?php echo (isset($options['active_metaKeyword']) && $options['active_metaKeyword'])? 'checked': ''; ?> />
+			</th>
+			<td class='plugin-title'>
+				<strong><?php _e('Print meta Keyword', 'vkExUnit'); ?></strong>
+			</td>
+			<td class='column-Keyword desc'>
+				<div class='plugin-Keyword'>
+					<p><?php _e('Print meta Keyword to html head.', 'vkExUnit'); ?></p>
+				</div><!-- [ /.plugin-Keyword ] -->
+			</td>
+		</tr>
 
 		<!-- [ active_sns ] -->
 		<tr<?php echo (isset($options['active_sns']) && $options['active_sns']) ? ' class="active"': ' class="inactive"'; ?>>
@@ -77,7 +113,7 @@
 				<input type="checkbox" name="vkExUnit_common_options[active_sns]" id="checkbox_active_sns" value="true" <?php echo (isset($options['active_sns']) && $options['active_sns'])? 'checked': ''; ?> />
 			</th>
 			<td class='plugin-title'>
-				<strong>Social media cooperation</strong>
+				<strong><?php _e('Social media cooperation.', 'vkExUnit'); ?></strong>
 				<div class="row-actions visible">
 
 				<?php if (isset($options['active_sns']) && $options['active_sns']) : ?>

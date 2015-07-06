@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: vkExUnit\n"
 "Report-Msgid-Bugs-To: Translator Name <translations@example.com>\n"
-"POT-Creation-Date: 2015-07-03 12:10+0900\n"
+"POT-Creation-Date: 2015-07-06 13:46+0900\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: Vektor,Inc. <info@vektor-inc.co.jp>\n"
@@ -24,6 +24,10 @@ msgstr ""
 "X-Generator: Poedit 1.8.2\n"
 "X-Poedit-SearchPath-0: .\n"
 
+#: admin_wrapper.php:7 admin_wrapper.php:8
+msgid "Main setting"
+msgstr ""
+
 #: common_helpers.php:126
 #, php-format
 msgid "Search Results for : %s"
@@ -33,94 +37,94 @@ msgstr ""
 msgid "Not found"
 msgstr ""
 
-#: common_helpers.php:138 common_helpers.php:202
+#: common_helpers.php:138 common_helpers.php:206
 #, php-format
 msgid "Page of %s"
 msgstr ""
 
-#: common_helpers.php:162 common_helpers.php:170
+#: common_helpers.php:166 common_helpers.php:174
 #, php-format
 msgid "About %s"
 msgstr ""
 
-#: common_helpers.php:174 common_helpers.php:223
+#: common_helpers.php:178 common_helpers.php:227
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr ""
 
-#: common_helpers.php:175
+#: common_helpers.php:179
 #, php-format
 msgctxt "Yearly archive description"
 msgid "Article of %s."
 msgstr ""
 
-#: common_helpers.php:178 common_helpers.php:225
+#: common_helpers.php:182 common_helpers.php:229
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr ""
 
-#: common_helpers.php:179 common_helpers.php:183 common_helpers.php:187
+#: common_helpers.php:183 common_helpers.php:187 common_helpers.php:191
 #, php-format
 msgctxt "Archive description"
 msgid "Article of %s."
 msgstr ""
 
-#: common_helpers.php:221
+#: common_helpers.php:225
 #, php-format
 msgid "Author: %s"
 msgstr ""
 
-#: common_helpers.php:227
+#: common_helpers.php:231
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr ""
 
-#: common_helpers.php:230
+#: common_helpers.php:234
 msgctxt "post format archive title"
 msgid "Asides"
 msgstr ""
 
-#: common_helpers.php:232
+#: common_helpers.php:236
 msgctxt "post format archive title"
 msgid "Galleries"
 msgstr ""
 
-#: common_helpers.php:234
+#: common_helpers.php:238
 msgctxt "post format archive title"
 msgid "Images"
 msgstr ""
 
-#: common_helpers.php:236
+#: common_helpers.php:240
 msgctxt "post format archive title"
 msgid "Videos"
 msgstr ""
 
-#: common_helpers.php:238
+#: common_helpers.php:242
 msgctxt "post format archive title"
 msgid "Quotes"
 msgstr ""
 
-#: common_helpers.php:240
+#: common_helpers.php:244
 msgctxt "post format archive title"
 msgid "Links"
 msgstr ""
 
-#: common_helpers.php:242
+#: common_helpers.php:246
 msgctxt "post format archive title"
 msgid "Statuses"
 msgstr ""
 
-#: common_helpers.php:244
+#: common_helpers.php:248
 msgctxt "post format archive title"
 msgid "Audio"
 msgstr ""
 
-#: common_helpers.php:246
+#: common_helpers.php:250
 msgctxt "post format archive title"
 msgid "Chats"
 msgstr ""
 
-#: common_helpers.php:262 plugins/other_widget/old/widget-taxonomy-list.php:81
+#: common_helpers.php:266 plugins/other_widget/old/widget-taxonomy-list.php:81
 msgid "Archives"
 msgstr ""
 
@@ -148,6 +152,7 @@ msgstr ""
 
 #: plugins/google_analytics/ga_admin.php:9
 #: plugins/google_analytics/ga_admin.php:13
+#: plugins/google_analytics/google_analytics.php:18
 msgid "Google Analytics Settings"
 msgstr ""
 
@@ -321,7 +326,7 @@ msgid "3PR area1 setting"
 msgstr ""
 
 #: plugins/other_widget/widget-3pr-area.php:49
-#: plugins/other_widget/widget-3pr-area.php:101
+#: plugins/other_widget/widget-3pr-area.php:102
 #: plugins/other_widget/widget-3pr-area.php:154
 #: plugins/other_widget/widget-new-posts.php:75
 #: plugins/other_widget/widget-profile.php:35
@@ -330,15 +335,15 @@ msgid "Title:"
 msgstr ""
 
 #: plugins/other_widget/widget-3pr-area.php:55
-#: plugins/other_widget/widget-3pr-area.php:107
+#: plugins/other_widget/widget-3pr-area.php:108
 #: plugins/other_widget/widget-3pr-area.php:160
 msgid "Select image for PC:"
 msgstr ""
 
 #: plugins/other_widget/widget-3pr-area.php:61
 #: plugins/other_widget/widget-3pr-area.php:78
-#: plugins/other_widget/widget-3pr-area.php:113
-#: plugins/other_widget/widget-3pr-area.php:131
+#: plugins/other_widget/widget-3pr-area.php:114
+#: plugins/other_widget/widget-3pr-area.php:132
 #: plugins/other_widget/widget-3pr-area.php:166
 #: plugins/other_widget/widget-3pr-area.php:183
 #: plugins/other_widget/widget-profile.php:46
@@ -347,8 +352,8 @@ msgstr ""
 
 #: plugins/other_widget/widget-3pr-area.php:62
 #: plugins/other_widget/widget-3pr-area.php:79
-#: plugins/other_widget/widget-3pr-area.php:114
-#: plugins/other_widget/widget-3pr-area.php:132
+#: plugins/other_widget/widget-3pr-area.php:115
+#: plugins/other_widget/widget-3pr-area.php:133
 #: plugins/other_widget/widget-3pr-area.php:167
 #: plugins/other_widget/widget-3pr-area.php:184
 #: plugins/other_widget/widget-profile.php:47
@@ -356,24 +361,24 @@ msgid "Clear image"
 msgstr ""
 
 #: plugins/other_widget/widget-3pr-area.php:72
-#: plugins/other_widget/widget-3pr-area.php:125
+#: plugins/other_widget/widget-3pr-area.php:126
 #: plugins/other_widget/widget-3pr-area.php:177
 msgid "Select image for Mobile:"
 msgstr ""
 
 #: plugins/other_widget/widget-3pr-area.php:88
-#: plugins/other_widget/widget-3pr-area.php:141
+#: plugins/other_widget/widget-3pr-area.php:142
 #: plugins/other_widget/widget-3pr-area.php:194
 msgid "Summary Text:"
 msgstr ""
 
-#: plugins/other_widget/widget-3pr-area.php:93
+#: plugins/other_widget/widget-3pr-area.php:94
 #: plugins/other_widget/widget-3pr-area.php:146
 #: plugins/other_widget/widget-3pr-area.php:199
 msgid "Link URL:"
 msgstr ""
 
-#: plugins/other_widget/widget-3pr-area.php:99
+#: plugins/other_widget/widget-3pr-area.php:100
 msgid "3PR area2 setting"
 msgstr ""
 
@@ -426,39 +431,39 @@ msgstr ""
 msgid "Profile Text:"
 msgstr ""
 
-#: plugins/other_widget/widget-profile.php:65
+#: plugins/other_widget/widget-profile.php:62
 msgid "Facebook URL:"
 msgstr ""
 
-#: plugins/other_widget/widget-profile.php:70
+#: plugins/other_widget/widget-profile.php:67
 msgid "Twitter URL:"
 msgstr ""
 
-#: plugins/other_widget/widget-profile.php:75
+#: plugins/other_widget/widget-profile.php:72
 msgid "Email Address:"
 msgstr ""
 
-#: plugins/other_widget/widget-profile.php:80
+#: plugins/other_widget/widget-profile.php:77
 msgid "Youtube URL:"
 msgstr ""
 
-#: plugins/other_widget/widget-profile.php:85
+#: plugins/other_widget/widget-profile.php:82
 msgid "RSS URL:"
 msgstr ""
 
-#: plugins/other_widget/widget-profile.php:90
+#: plugins/other_widget/widget-profile.php:87
 msgid "instagram URL:"
 msgstr ""
 
-#: plugins/other_widget/widget-profile.php:94
+#: plugins/other_widget/widget-profile.php:91
 msgid "linkedin URL:"
 msgstr ""
 
-#: plugins/other_widget/widget-profile.php:124
+#: plugins/other_widget/widget-profile.php:121
 msgid "Site's Profile"
 msgstr ""
 
-#: plugins/related_posts/related_posts.php:34 vkExUnit_admin.php:143
+#: plugins/related_posts/related_posts.php:34 vkExUnit_admin.php:161
 msgid "Related posts"
 msgstr ""
 
@@ -687,6 +692,10 @@ msgstr ""
 msgid "Page top"
 msgstr ""
 
+#: plugins/sns/sns.php:19
+msgid "SNS"
+msgstr ""
+
 #: plugins/sns/sns_admin.php:1
 msgid "SNS Settings"
 msgstr ""
@@ -721,15 +730,15 @@ msgstr ""
 msgid "twitter ID"
 msgstr ""
 
-#: vkExUnit_admin.php:12 vkExUnit_admin.php:191
+#: vkExUnit_admin.php:12 vkExUnit_admin.php:209
 msgid "Select all"
 msgstr ""
 
-#: vkExUnit_admin.php:12 vkExUnit_admin.php:191
+#: vkExUnit_admin.php:12 vkExUnit_admin.php:209
 msgid "Function"
 msgstr ""
 
-#: vkExUnit_admin.php:12 vkExUnit_admin.php:191
+#: vkExUnit_admin.php:12 vkExUnit_admin.php:209
 msgid "Description"
 msgstr ""
 
@@ -772,61 +781,77 @@ msgid "Print meta description to html head."
 msgstr ""
 
 #: vkExUnit_admin.php:75
+msgid "Choose Rewrite the print title tag"
+msgstr ""
+
+#: vkExUnit_admin.php:80
+msgid "Rewrite the print title tag"
+msgstr ""
+
+#: vkExUnit_admin.php:84
+msgid "Print is rewritten by its own rules to html head."
+msgstr ""
+
+#: vkExUnit_admin.php:93
 msgid "Choose Social media cooperation."
 msgstr ""
 
-#: vkExUnit_admin.php:87 vkExUnit_admin.php:121
+#: vkExUnit_admin.php:98
+msgid "Social media cooperation."
+msgstr ""
+
+#: vkExUnit_admin.php:105 vkExUnit_admin.php:139
 msgid "Setting"
 msgstr ""
 
-#: vkExUnit_admin.php:97
+#: vkExUnit_admin.php:115
 msgid "Print og tags to html head."
 msgstr ""
 
-#: vkExUnit_admin.php:98
+#: vkExUnit_admin.php:116
 msgid "Print twitter card tags to html head."
 msgstr ""
 
-#: vkExUnit_admin.php:99
+#: vkExUnit_admin.php:117
 msgid "Print social bookmarks."
 msgstr ""
 
-#: vkExUnit_admin.php:100
+#: vkExUnit_admin.php:118
 msgid "Facebook Page Plugin."
 msgstr ""
 
-#: vkExUnit_admin.php:110
+#: vkExUnit_admin.php:128
 msgid "Choose Print Google Analytics tracking code."
 msgstr ""
 
-#: vkExUnit_admin.php:129
+#: vkExUnit_admin.php:147
 msgid "Print Google Analytics tracking code."
 msgstr ""
 
-#: vkExUnit_admin.php:138
+#: vkExUnit_admin.php:156
 msgid "Choose Related posts."
 msgstr ""
 
-#: vkExUnit_admin.php:147
+#: vkExUnit_admin.php:165
 msgid "Print Related posts lists to post content bottom."
 msgstr ""
 
-#: vkExUnit_admin.php:156 vkExUnit_admin.php:174
+#: vkExUnit_admin.php:174 vkExUnit_admin.php:192
 msgid "Choose other widgets."
 msgstr ""
 
-#: vkExUnit_admin.php:161
+#: vkExUnit_admin.php:179
 msgid "Other Widgets"
 msgstr ""
 
-#: vkExUnit_admin.php:165
+#: vkExUnit_admin.php:183
 msgid "You can use various widgets."
 msgstr ""
 
-#: vkExUnit_admin.php:179
+#: vkExUnit_admin.php:197
 msgid "CSS customize"
 msgstr ""
 
-#: vkExUnit_admin.php:183
+#: vkExUnit_admin.php:201
 msgid "You can set Customize CSS."
 msgstr ""

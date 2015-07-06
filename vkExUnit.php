@@ -3,7 +3,7 @@
 Plugin Name: VK All in One Expansion Unit
 Plugin URI: https://github.com/kurudrive/VK-All-in-one-Expansion-Unit
 Description: This plug-in is an integrated plug-in with a variety of features that make it powerful your web site. Example Facebook Page Plugin,Social Bookmarks,Print OG Tags,Print Twitter Card Tags,Print Google Analytics tag,New post widget,Insert Related Posts and more!
-Version: 0.1.2.0
+Version: 0.1.3.0
 Author: Vektor,Inc.
 Author URI: http://vektor-inc.co.jp
 License: GPL2
@@ -96,6 +96,9 @@ if ( isset($options['active_relatedPosts']) && $options['active_relatedPosts'] )
 if ( isset($options['active_metaDescription']) && $options['active_metaDescription'] )
 	require vkExUnit_get_directory() . '/plugins/meta_description/meta_description.php';
 
+if ( isset($options['active_metaKeyword']) && $options['active_metaKeyword'] )
+	require vkExUnit_get_directory() . '/plugins/meta_keyword/meta_keyword.php';
+
 if ( isset($options['active_otherWidgets']) && $options['active_otherWidgets'] )
 	require vkExUnit_get_directory() . '/plugins/other_widget/other_widget.php';
 
@@ -155,3 +158,13 @@ add_action( 'admin_print_styles-vk-ex-unit_page_vkExUnit_main_setting', 'vkExUni
 function vkExUnit_admin_enq(){
 	wp_enqueue_style('vkexunit-css-admin', plugins_url('/css/vkExUnit_admin.css', __FILE__));
 }
+
+/*-------------------------------------------*/
+/*	swich wp_title 
+/*-------------------------------------------*/
+// if active_wpTitle true is run 
+if(isset($options['active_wpTitle']) && $options['active_wpTitle']){
+	add_filter('wp_title','vkExUnit_get_wp_head_title');	
+}
+
+// 「vkExUnit_get_wp_head_title」is common_helpers.php Head title
