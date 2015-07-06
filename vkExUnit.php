@@ -3,7 +3,7 @@
 Plugin Name: VK All in One Expansion Unit
 Plugin URI: https://github.com/kurudrive/VK-All-in-one-Expansion-Unit
 Description: This plug-in is an integrated plug-in with a variety of features that make it powerful your web site. Example Facebook Page Plugin,Social Bookmarks,Print OG Tags,Print Twitter Card Tags,Print Google Analytics tag,New post widget,Insert Related Posts and more!
-Version: 0.1.1.0
+Version: 0.1.3.0
 Author: Vektor,Inc.
 Author URI: http://vektor-inc.co.jp
 License: GPL2
@@ -71,7 +71,7 @@ function vkExUnit_add_setting_page(){
 	require dirname( __FILE__ ) . '/vkExUnit_admin.php';
 }
 
-
+require_once( 'admin_wrapper.php' );
 
 /*-------------------------------------------*/
 /*	Load modules
@@ -82,6 +82,7 @@ $options = vkExUnit_get_common_options();
 require vkExUnit_get_directory() . '/common_helpers.php';
 
 require vkExUnit_get_directory() . '/plugins/sitemap_page/sitemap_page.php';
+require vkExUnit_get_directory() . '/plugins/dashboard_info_widget/dashboard-info-widget.php';
 
 if ( isset($options['active_sns']) && $options['active_sns'] )
 	require vkExUnit_get_directory() . '/plugins/sns/sns.php';
@@ -94,6 +95,9 @@ if ( isset($options['active_relatedPosts']) && $options['active_relatedPosts'] )
 
 if ( isset($options['active_metaDescription']) && $options['active_metaDescription'] )
 	require vkExUnit_get_directory() . '/plugins/meta_description/meta_description.php';
+
+if ( isset($options['active_metaKeyword']) && $options['active_metaKeyword'] )
+	require vkExUnit_get_directory() . '/plugins/meta_keyword/meta_keyword.php';
 
 if ( isset($options['active_otherWidgets']) && $options['active_otherWidgets'] )
 	require vkExUnit_get_directory() . '/plugins/other_widget/other_widget.php';
@@ -139,8 +143,6 @@ function vkExUnit_admin_add_js( $hook_suffix ) {
 	wp_enqueue_script( 'vkExUnit_admin_js' );
 }
 
-require_once( 'admin_warpper.php' );
-
 /*-------------------------------------------*/
 /*	Add fontawesome
 /*-------------------------------------------*/
@@ -151,3 +153,18 @@ function vkExUnit_addfontawesome(){
 		echo '<link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">'.PHP_EOL;
 	}
 }
+
+add_action( 'admin_print_styles-vk-ex-unit_page_vkExUnit_main_setting', 'vkExUnit_admin_enq');
+function vkExUnit_admin_enq(){
+	wp_enqueue_style('vkexunit-css-admin', plugins_url('/css/vkExUnit_admin.css', __FILE__));
+}
+
+/*-------------------------------------------*/
+/*	swich wp_title 
+/*-------------------------------------------*/
+// if active_wpTitle true is run 
+if(isset($options['active_wpTitle']) && $options['active_wpTitle']){
+	add_filter('wp_title','vkExUnit_get_wp_head_title');	
+}
+
+// 「vkExUnit_get_wp_head_title」is common_helpers.php Head title
