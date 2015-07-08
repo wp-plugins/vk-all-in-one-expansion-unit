@@ -3,7 +3,7 @@
 Plugin Name: VK All in One Expansion Unit
 Plugin URI: https://github.com/kurudrive/VK-All-in-one-Expansion-Unit
 Description: This plug-in is an integrated plug-in with a variety of features that make it powerful your web site. Example Facebook Page Plugin,Social Bookmarks,Print OG Tags,Print Twitter Card Tags,Print Google Analytics tag,New post widget,Insert Related Posts and more!
-Version: 0.1.3.1
+Version: 0.1.4.0
 Author: Vektor,Inc.
 Author URI: http://vektor-inc.co.jp
 License: GPL2
@@ -96,6 +96,9 @@ if ( isset($options['active_relatedPosts']) && $options['active_relatedPosts'] )
 if ( isset($options['active_metaDescription']) && $options['active_metaDescription'] )
 	require vkExUnit_get_directory() . '/plugins/meta_description/meta_description.php';
 
+if ( isset($options['active_icon']) && $options['active_icon'] )
+	require vkExUnit_get_directory() . '/plugins/icons.php';
+
 if ( isset($options['active_metaKeyword']) && $options['active_metaKeyword'] )
 	require vkExUnit_get_directory() . '/plugins/meta_keyword/meta_keyword.php';
 
@@ -104,6 +107,9 @@ if ( isset($options['active_otherWidgets']) && $options['active_otherWidgets'] )
 
 if ( isset($options['active_css_customize']) && $options['active_css_customize'] )
 	require vkExUnit_get_directory() . '/plugins/css_customize/css_customize.php';
+
+if ( isset($options['active_auto_eyecatch']) && $options['active_auto_eyecatch'] )
+	require vkExUnit_get_directory() . '/plugins/auto_eyecatch.php';
 
 /*-------------------------------------------*/
 /*	Add vkExUnit css
@@ -166,5 +172,3 @@ function vkExUnit_admin_enq(){
 if(isset($options['active_wpTitle']) && $options['active_wpTitle']){
 	add_filter('wp_title','vkExUnit_get_wp_head_title');	
 }
-
-// 「vkExUnit_get_wp_head_title」is common_helpers.php Head title

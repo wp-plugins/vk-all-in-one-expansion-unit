@@ -50,20 +50,20 @@
 			</td>
 		</tr>
 		
-		<!-- [ active_metaDescription ] -->
-		<tr<?php echo (isset($options['active_metaDescription']) && $options['active_metaDescription'])? ' class="active"': ' class="inactive"'; ?>>
+		<!-- [ active_icon ] -->
+		<tr<?php echo (isset($options['active_icon']) && $options['active_icon'])? ' class="active"': ' class="inactive"'; ?>>
 			<th scope='row' class='check-column'>
-				<label class='screen-reader-text' for='checkbox_active_metaDescription' >
+				<label class='screen-reader-text' for='checkbox_active_icon' >
 				<?php _e('Choose Print meta description.', 'vkExUnit'); ?>
 				</label>
-				<input type="checkbox" name="vkExUnit_common_options[active_metaDescription]" id="checkbox_active_metaDescription" value="true" <?php echo (isset($options['active_metaDescription']) && $options['active_metaDescription'])? 'checked': ''; ?> />
+				<input type="checkbox" name="vkExUnit_common_options[active_icon]" id="checkbox_active_icon" value="true" <?php echo (isset($options['active_icon']) && $options['active_icon'])? 'checked': ''; ?> />
 			</th>
 			<td class='plugin-title'>
-				<strong><?php _e('Print meta description', 'vkExUnit'); ?></strong>
+				<strong><?php _e('Favicon setting', 'vkExUnit'); ?></strong>
 			</td>
 			<td class='column-description desc'>
 				<div class='plugin-description'>
-					<p><?php _e('Print meta description to html head.', 'vkExUnit'); ?></p>
+					<p><?php _e('About favicon.', 'vkExUnit'); ?></p>
 				</div><!-- [ /.plugin-description ] -->
 			</td>
 		</tr>
@@ -72,12 +72,12 @@
 		<tr<?php echo (isset($options['active_wpTitle']) && $options['active_wpTitle'])? ' class="active"': ' class="inactive"'; ?>>
 			<th scope='row' class='check-column'>
 				<label class='screen-reader-text' for='checkbox_active_wpTitle' >
-				<?php _e('Choose Rewrite the print title tag', 'vkExUnit'); ?>
+				<?php _e('Choose Rewrite the title tag', 'vkExUnit'); ?>
 				</label>
-				<input type="checkbox" name="vkExUnit_common_options[active_wpTitle]" id="checkbox_aactive_wpTitle" value="true" <?php echo (isset($options['active_wpTitle']) && $options['active_wpTitle'])? 'checked': ''; ?> />
+				<input type="checkbox" name="vkExUnit_common_options[active_wpTitle]" id="checkbox_active_wpTitle" value="true" <?php echo (isset($options['active_wpTitle']) && $options['active_wpTitle'])? 'checked': ''; ?> />
 			</th>
 			<td class='plugin-title'>
-				<strong><?php _e('Rewrite the print title tag', 'vkExUnit'); ?></strong>
+				<strong><?php _e('Rewrite the title tag', 'vkExUnit'); ?></strong>
 			</td>
 			<td class='column-description desc'>
 				<div class='plugin-description'>
@@ -96,6 +96,16 @@
 			</th>
 			<td class='plugin-title'>
 				<strong><?php _e('Print meta Keyword', 'vkExUnit'); ?></strong>
+
+				<?php if (isset($options['active_metaKeyword']) && $options['active_metaKeyword']) : ?>
+				<div class="row-actions visible">
+					<span class="0">
+					<a href="<?php echo admin_url().'admin.php?page=vkExUnit_main_setting#vkExUnit_common_keywords';?>">
+					<?php _e('Setting','vkExUnit');?>
+					</a></span>
+				</div>
+				<?php endif; ?>
+				
 			</td>
 			<td class='column-Keyword desc'>
 				<div class='plugin-Keyword'>
@@ -104,6 +114,23 @@
 			</td>
 		</tr>
 
+		<!-- [ active_metaDescription ] -->
+		<tr<?php echo (isset($options['active_metaDescription']) && $options['active_metaDescription'])? ' class="active"': ' class="inactive"'; ?>>
+			<th scope='row' class='check-column'>
+				<label class='screen-reader-text' for='checkbox_active_metaDescription' >
+				<?php _e('Choose Print meta description.', 'vkExUnit'); ?>
+				</label>
+				<input type="checkbox" name="vkExUnit_common_options[active_metaDescription]" id="checkbox_active_metaDescription" value="true" <?php echo (isset($options['active_metaDescription']) && $options['active_metaDescription'])? 'checked': ''; ?> />
+			</th>
+			<td class='plugin-title'>
+				<strong><?php _e('Print meta description', 'vkExUnit'); ?></strong>
+			</td>
+			<td class='column-description desc'>
+				<div class='plugin-description'>
+					<p><?php _e('Print meta description to html head.', 'vkExUnit'); ?></p>
+				</div><!-- [ /.plugin-description ] -->
+			</td>
+		</tr>
 		<!-- [ active_sns ] -->
 		<tr<?php echo (isset($options['active_sns']) && $options['active_sns']) ? ' class="active"': ' class="inactive"'; ?>>
 			<th scope='row' class='check-column'>
@@ -114,18 +141,16 @@
 			</th>
 			<td class='plugin-title'>
 				<strong><?php _e('Social media cooperation.', 'vkExUnit'); ?></strong>
-				<div class="row-actions visible">
-
+				
 				<?php if (isset($options['active_sns']) && $options['active_sns']) : ?>
-
+				<div class="row-actions visible">
 					<span class="0">
 					<a href="<?php echo admin_url().'admin.php?page=vkExUnit_main_setting';?>">
 					<?php _e('Setting','vkExUnit');?>
 					</a></span>
-
-				<?php endif; ?>
-
 				</div>
+				<?php endif; ?>
+				
 			</td>
 			<td class='column-description desc'>
 				<div class='plugin-description'>
@@ -199,6 +224,13 @@
 			<td class='column-description desc'>
 				<div class='plugin-description'>
 					<p><?php _e('You can use various widgets.', 'vkExUnit'); ?></p>
+					<ul>
+					<li><?php _e('VK_Recent Posts - display the link text and the date of the latest article title.','vkExUnit');?></li>
+					<li><?php _e('VK_Page content to widget - display the contents of the page to the widgets.','vkExUnit');?></li>
+					<li><?php _e('VK_Profile - display the profile entered in the widget.','vkExUnit');?></li>
+					<li><?php _e('VK_FB Page Plugin - display the Facebook Page Plugin.','vkExUnit');?></li>
+					<li><?php _e('VK_3PR area - display the 3PR area.','vkExUnit');?></li>
+					</ul>
 				</div><!-- [ /.plugin-description ] -->
 			</td>
 		</tr>
@@ -219,6 +251,25 @@
 					<p><?php _e('You can set Customize CSS.', 'vkExUnit'); ?></p>
 				</div><!-- [ /.plugin-description ] -->
 			</td>
+		</tr>
+
+		<!-- [ AUTO Eye Catch ] -->
+		<tr<?php echo (isset($options['active_auto_eyecatch']) && $options['active_auto_eyecatch'])? ' class="active"': ' class="inactive"'; ?>>
+			<th scope='row' class='check-column'>
+				<label class='screen-reader-text' for='checkbox_active_auto_eyecatch' >
+				<?php _e('Automatic Eye Catch insert', 'vkExUnit'); ?>
+				</label>
+				<input type="checkbox" name="vkExUnit_common_options[active_auto_eyecatch]" id="checkbox_active_auto_eyecatch" value="true" <?php echo (isset($options['active_auto_eyecatch']) && $options['active_auto_eyecatch'])? 'checked': ''; ?> />
+			</th>
+			<td class='plugin-title'>
+				<strong><?php _e('Automatic Eye Catch insert', 'vkExUnit'); ?></strong>
+			</td>
+			<td class='column-description desc'>
+				<div class='plugin-description'>
+					<p><?php _e('Display Eye Catch image at before content.', 'vkExUnit'); ?></p>
+				</div><!-- [ /.plugin-description ] -->
+			</td>
+
 		</tr>
 		</tbody>
 

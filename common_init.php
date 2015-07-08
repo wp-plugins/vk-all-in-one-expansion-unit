@@ -35,6 +35,7 @@ function vkExUnit_get_common_options_default() {
 		'active_relatedPosts'       => true,
 		'active_otherWidgets'       => true,
 		'active_css_customize'      => true,
+		'active_auto_eyecatch'      => true,
 	);
 	return apply_filters( 'vkExUnit_common_options_default', $default_options );
 }
@@ -49,12 +50,14 @@ function vkExUnit_common_options_validate( $input ) {
 	$output['active_fontawesome']       = (isset($input['active_fontawesome'])) ? true:false;
 	$output['active_metaDescription']   = (isset($input['active_metaDescription'])) ? true:false;
 	$output['active_metaKeyword']       = (isset($input['active_metaKeyword'])) ? true:false;
+	$output['active_icon']              = (isset($input['active_icon'])) ? true:false;
 	$output['active_wpTitle']   		= (isset($input['active_wpTitle'])) ? true:false;
 	$output['active_sns']               = (isset($input['active_sns'])) ? true:false;
 	$output['active_ga']                = (isset($input['active_ga'])) ? true:false;
 	$output['active_relatedPosts']      = (isset($input['active_relatedPosts'])) ? true:false;
 	$output['active_otherWidgets']      = (isset($input['active_otherWidgets'])) ? true:false;
 	$output['active_css_customize']     = (isset($input['active_css_customize'])) ? true:false;
+	$output['active_auto_eyecatch']     = (isset($input['active_auto_eyecatch'])) ? true:false;
 
 	return apply_filters( 'vkExUnit_common_options_validate', $output, $input, $defaults );
 }
