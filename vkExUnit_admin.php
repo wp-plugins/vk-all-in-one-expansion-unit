@@ -131,6 +131,7 @@
 				</div><!-- [ /.plugin-description ] -->
 			</td>
 		</tr>
+
 		<!-- [ active_sns ] -->
 		<tr<?php echo (isset($options['active_sns']) && $options['active_sns']) ? ' class="active"': ' class="inactive"'; ?>>
 			<th scope='row' class='check-column'>
@@ -145,7 +146,7 @@
 				<?php if (isset($options['active_sns']) && $options['active_sns']) : ?>
 				<div class="row-actions visible">
 					<span class="0">
-					<a href="<?php echo admin_url().'admin.php?page=vkExUnit_main_setting';?>">
+					<a href="<?php echo admin_url().'admin.php?page=vkExUnit_main_setting#vkExUnit_sns_options';?>">
 					<?php _e('Setting','vkExUnit');?>
 					</a></span>
 				</div>
@@ -157,9 +158,14 @@
 					<ul>
 					<li><?php _e('Print og tags to html head.','vkExUnit');?></li>
 					<li><?php _e('Print twitter card tags to html head.','vkExUnit');?></li>
-					<li><?php _e('Print social bookmarks.','vkExUnit');?></li>
-					<li><?php _e('Facebook Page Plugin.','vkExUnit');?></li>
+					<li><?php _e('Print social bookmark buttons.','vkExUnit');?></li>
+					<li><?php _e('Facebook Page Plugin widget.','vkExUnit');?></li>
+					<li><?php _e('Print Follow me box to content bottom.','vkExUnit');?></li>
 					</ul>
+					<p><?php 
+					$settingPage = '<a href="'.admin_url().'admin.php?page=vkExUnit_main_setting#vkExUnit_sns_options">'.__('Main setting page').'</a>';
+						printf( __( '* You can stop the function separately from the %s.', 'vkExUnit' ), $settingPage );?>
+					</p>
 				</div><!-- [ /.plugin-description ] -->
 			</td>
 		</tr>
@@ -178,7 +184,7 @@
 				<?php if (isset($options['active_ga']) && $options['active_ga']) : ?>
 					
 					<span class="0">
-					<a href="<?php echo admin_url().'admin.php?page=vkExUnit_main_setting';?>">
+					<a href="<?php echo admin_url().'admin.php?page=vkExUnit_main_setting#vkExUnit_ga_options';?>">
 					<?php _e('Setting','vkExUnit');?>
 					</a></span>
 
@@ -219,7 +225,11 @@
 				<input type="checkbox" name="vkExUnit_common_options[active_otherWidgets]" id="checkbox_active_otherWidgets" value="true" <?php echo (isset($options['active_otherWidgets']) && $options['active_otherWidgets'])? 'checked': ''; ?> />
 			</th>
 			<td class='plugin-title'>
-				<strong><?php _e('Other Widgets', 'vkExUnit');?></strong>
+				<strong><?php _e('Widgets', 'vkExUnit');?></strong>
+				<span>
+				<a href="<?php echo admin_url().'widgets.php';?>">
+				<?php _e('Setting','vkExUnit');?>
+				</a></span>
 			</td>
 			<td class='column-description desc'>
 				<div class='plugin-description'>
@@ -230,6 +240,8 @@
 					<li><?php _e('VK_Profile - display the profile entered in the widget.','vkExUnit');?></li>
 					<li><?php _e('VK_FB Page Plugin - display the Facebook Page Plugin.','vkExUnit');?></li>
 					<li><?php _e('VK_3PR area - display the 3PR area.','vkExUnit');?></li>
+					<li>VK_<?php _e( 'categories/tags list', 'vkExUnit' ); ?> - <?php _e( 'Displays a categories, tags or format list.', 'vkExUnit' ); ?></li>
+					<li>VK_<?php _e( 'archive list', 'vkExUnit' ); ?> - <?php _e( 'Displays a list of archives. You can choose the post type and also to display archives by month or by year.' , 'vkExUnit' ); ?></li>
 					</ul>
 				</div><!-- [ /.plugin-description ] -->
 			</td>
@@ -245,6 +257,14 @@
 			</th>
 			<td class='plugin-title'>
 				<strong><?php _e('CSS customize', 'vkExUnit');?></strong>
+				<?php if (isset($options['active_css_customize']) && $options['active_css_customize']) : ?>
+					
+					<span>
+					<a href="<?php echo admin_url().'admin.php?page=vkExUnit_css_customize';?>">
+					<?php _e('Setting','vkExUnit');?>
+					</a></span>
+
+				<?php endif; ?>
 			</td>
 			<td class='column-description desc'>
 				<div class='plugin-description'>
