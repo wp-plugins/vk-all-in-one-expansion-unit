@@ -7,8 +7,6 @@ add_post_type_support( 'page', 'excerpt' ); // add excerpt
 /*-------------------------------------------*/
 add_action('wp_head', 'vkExUnit_print_og',20 );
 function vkExUnit_print_og() {
-	global $vkExUnit_sns_options;
-	if ($vkExUnit_sns_options['ogTagDisplay'] == 'og_on') {
 
 	//$ogImage = $vkExUnit_sns_options['ogImage'];
 	//$fbAppId = $vkExUnit_sns_options['fbAppId'];
@@ -26,12 +24,12 @@ function vkExUnit_print_og() {
 	$vkExUnitOGP .= '<meta property="og:url" content="'.$linkUrl.'" />'."\n";
 	$vkExUnitOGP .= '<meta property="og:title" content="'.vkExUnit_get_wp_head_title().'" />'."\n";
 	$vkExUnitOGP .= '<meta property="og:description" content="'.vkExUnit_get_pageDescription().'" />'."\n";
-	if ($vkExUnit_sns_options['fbAppId']){
+	if (isset($vkExUnit_sns_options['fbAppId']) && $vkExUnit_sns_options['fbAppId']){
 		$vkExUnitOGP = $vkExUnitOGP.'<meta property="fb:app_id" content="'.$vkExUnit_sns_options['fbAppId'].'" />'."\n";
 	}
 	if (is_front_page() || is_home()) {
 		$vkExUnitOGP .= '<meta property="og:type" content="website" />'."\n";
-		if ($vkExUnit_sns_options['ogImage']){
+		if (isset($vkExUnit_sns_options['ogImage']) && $vkExUnit_sns_options['ogImage']){
 			$vkExUnitOGP .= '<meta property="og:image" content="'.$vkExUnit_sns_options['ogImage'].'" />'."\n";
 		}
 	} else if (is_category() || is_archive()) {
@@ -46,7 +44,7 @@ function vkExUnit_print_og() {
 			$image_id = get_post_thumbnail_id();
 			$image_url = wp_get_attachment_image_src($image_id,'large', true);
 			$vkExUnitOGP .= '<meta property="og:image" content="'.$image_url[0].'" />'."\n";
-		} else if ($vkExUnit_sns_options['ogImage']){
+		} else if (isset($vkExUnit_sns_options['ogImage']) && $vkExUnit_sns_options['ogImage'] ){
 			$vkExUnitOGP .= '<meta property="og:image" content="'.$vkExUnit_sns_options['ogImage'].'" />'."\n";
 		}
 	} else {
@@ -62,5 +60,4 @@ function vkExUnit_print_og() {
 	}
 	$vkExUnitOGP = apply_filters('vkExUnitOGPCustom', $vkExUnitOGP );
 	echo $vkExUnitOGP;
-	} // if ($vkExUnit_sns_options['ogTagDisplay'] == 'og_on')
 }
