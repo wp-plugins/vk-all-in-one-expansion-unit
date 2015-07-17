@@ -3,7 +3,7 @@
 Plugin Name: VK All in One Expansion Unit
 Plugin URI: https://github.com/kurudrive/VK-All-in-one-Expansion-Unit
 Description: This plug-in is an integrated plug-in with a variety of features that make it powerful your web site. Example Facebook Page Plugin,Social Bookmarks,Print OG Tags,Print Twitter Card Tags,Print Google Analytics tag,New post widget,Insert Related Posts and more!
-Version: 0.1.5.1
+Version: 0.1.5.2
 Author: Vektor,Inc.
 Author URI: http://vektor-inc.co.jp
 License: GPL2
@@ -84,6 +84,10 @@ require vkExUnit_get_directory() . '/common_helpers.php';
 require vkExUnit_get_directory() . '/plugins/sitemap_page/sitemap_page.php';
 require vkExUnit_get_directory() . '/plugins/dashboard_info_widget/dashboard-info-widget.php';
 
+
+if ( isset($options['active_wpTitle']) && $options['active_wpTitle'] )
+	add_filter('wp_title','vkExUnit_get_wp_head_title');
+
 if ( isset($options['active_sns']) && $options['active_sns'] )
 	require vkExUnit_get_directory() . '/plugins/sns/sns.php';
 
@@ -110,6 +114,9 @@ if ( isset($options['active_css_customize']) && $options['active_css_customize']
 
 if ( isset($options['active_auto_eyecatch']) && $options['active_auto_eyecatch'] )
 	require vkExUnit_get_directory() . '/plugins/auto_eyecatch.php';
+
+if ( isset($options['active_childPageIndex']) && $options['active_childPageIndex'] )
+	require vkExUnit_get_directory() . '/plugins/child_page_index/child_page_index.php';
 
 /*-------------------------------------------*/
 /*	Add vkExUnit css
@@ -166,13 +173,6 @@ function vkExUnit_admin_enq(){
 	wp_enqueue_style('vkexunit-css-admin', plugins_url('/css/admin.css', __FILE__));
 }
 
-/*-------------------------------------------*/
-/*	swich wp_title 
-/*-------------------------------------------*/
-// if active_wpTitle true is run 
-if(isset($options['active_wpTitle']) && $options['active_wpTitle']){
-	add_filter('wp_title','vkExUnit_get_wp_head_title');	
-}
 /*-------------------------------------------*/
 /*	管理画面_admin_head JavaScriptのデバッグコンソールにhook_suffixの値を出力
 /*-------------------------------------------*/
