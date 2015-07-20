@@ -2,10 +2,43 @@
 @import "compass";
 @import "_bizvektor_theme_included_style";
 
-/*-------------------------------------------*/
+/*-------------------------------------------------*/
 /* ex_unit 
+/*-------------------------------------------------*/
+/* .common
 /*-------------------------------------------*/
+/* .autoEyeCatchBox
+/*-------------------------------------------*/
+/* .sitemap
+/*-------------------------------------------*/
+/* fb Page Plugin
+/*-------------------------------------------*/
+/* .socialSet
+/*-------------------------------------------*/
+/* Profile wiget Plugin
+/*-------------------------------------------*/
+/* 3PR area wiget Plugin
+/*-------------------------------------------*/
+/* childPageIndex Plugin
+/*-------------------------------------------*/
+
+/*-------------------------------------------*/
+/* .common
+/*-------------------------------------------*/
+
 .link-list li { padding:0.5em; }
+
+/*-------------------------------------------*/
+/* .autoEyeCatchBox
+/*-------------------------------------------*/
+
+.autoEyeCatchBox { display:block; overflow:hidden;margin-bottom:2em; }
+
+/*-------------------------------------------*/
+/* .sitemap
+/*-------------------------------------------*/
+
+
 
 .sitemap .sectionBox { padding-top:0; }
 .sitemap .sitemap-col { padding-bottom:2em; }
@@ -26,7 +59,7 @@
 .vkContentAddSection { display:block; clear:both; overflow:hidden; padding-top:20px; }
 
 /*-------------------------------------------*/
-/*			.socialSet 0.2.0.0
+/* .socialSet
 /*-------------------------------------------*/
 .socialSet ul { margin:0px;padding:0; }
 .socialSet ul li { position:relative; display:block;float:left; overflow:visible; margin-right:10px; padding:0px; background:none; }
@@ -99,14 +132,14 @@
 /*-------------------------------------------*/
 /* Profile wiget Plugin
 /*-------------------------------------------*/
-.profile-media{
+.profile_media{
 	margin: 0.5em 0;
 }
-.profile-text{
+.profile_text{
     margin-bottom: 0.5em;
     font-size: 14px;
 }
-.sns-btns{
+.sns_btns{
     margin: 0;
     padding: 0;
     width: 100%;
@@ -126,6 +159,8 @@
         text-decoration: none;
         font-size: 20px;
         &:hover{
+	        color: #fff;
+	        text-decoration: none;
 	        opacity: 0.8;
         }
     }
@@ -134,41 +169,37 @@
         vertical-align:middle;
         text-align:center;  
     }
-    .facebook-btn{
+    .facebook_btn{
         a{
             background: #3b5998;
         }
     }
-    .twitter-btn{
+    .twitter_btn{
         a{
             background: #55acee;
         }
     }
-    .mail-btn{
+    .mail_btn{
         a{
-	        width: 44px;
-			height: 44px;
-            border: solid 1px #ccc;
-            background: #fff;
-            color: #999;
+            background: #2F915F;
         }
     }
-    .youtube-btn{
+    .youtube_btn{
         a{
             background: #C81D1C;
         }
     }
-    .rss-btn{
+    .rss_btn{
         a{
             background: #f26522;
         }
     }
-    .instagram-btn{
+    .instagram_btn{
         a{
             background: #3f729b;
         }
     }
-    .linkedin-btn{
+    .linkedin_btn{
         a{
             background: #0077b5;
         }
@@ -177,17 +208,17 @@
 /*-------------------------------------------*/
 /* 3PR area wiget Plugin
 /*-------------------------------------------*/
-.pr-box{
+.prBox{
 	.subSection-title{
 		font-size: 18px;
 	}
-	.media-pr{
+	.media_pr{
 		margin-bottom: 0.5em;
 	}
-	.media-pc{
+	.media_pc{
 		display: block;
 	}
-	.media-sp{
+	.media_sp{
 		display: none;
 	}
 	.summary{
@@ -202,15 +233,49 @@
 	}
 }
 @media screen and (max-width:768px){
-.pr-box{
-	.media-pc{
+.prBox{
+	.media_pc{
 		display: none;
 	}
-	.media-sp{
+	.media_sp{
 		display: block;
 	}
 	.linkurl { 
 		margin-bottom: 1.5em; 
 	} 
 }	
+}
+/*-------------------------------------------*/
+/* childPageIndex Plugin
+/*-------------------------------------------*/
+.childPage_list {
+	margin-top: 4em;
+	a:hover{
+		text-decoration: none;
+	}
+	.childPage_list_box{
+		margin-bottom: 1.5em;
+		position: relative;
+	}
+	.childPage_list_title{
+		font-size: 18px;
+		line-height: 1.4;
+	}
+	.wp-post-image{
+		margin-bottom: 1em;
+	}
+	.childPage_list_body{
+		color: #333;
+		font-size: 14px;
+		margin-bottom: 0.5em;
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+	.childPage_list_text{
+		margin-bottom: 0;
+	}
+	.childPage_list_more{
+		float: right;
+	}
 }
