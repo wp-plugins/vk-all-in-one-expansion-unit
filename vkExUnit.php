@@ -2,8 +2,8 @@
 /*
 Plugin Name: VK All in One Expansion Unit
 Plugin URI: https://github.com/kurudrive/VK-All-in-one-Expansion-Unit
-Description: This plug-in is an integrated plug-in with a variety of features that make it powerful your web site. Example Facebook Page Plugin,Social Bookmarks,Print OG Tags,Print Twitter Card Tags,Print Google Analytics tag,New post widget,Insert Related Posts and more!
-Version: 0.1.5.9
+Description: This plug-in is an integrated plug-in with a variety of features that make it powerful your web site. Many features can be stopped individually. Example Facebook Page Plugin,Social Bookmarks,Print OG Tags,Print Twitter Card Tags,Print Google Analytics tag,New post widget,Insert Related Posts and more!
+Version: 0.1.6.1
 Author: Vektor,Inc.
 Author URI: http://vektor-inc.co.jp
 License: GPL2
@@ -81,7 +81,7 @@ require vkExUnit_get_directory() . '/common_init.php';
 $options = vkExUnit_get_common_options();
 require vkExUnit_get_directory() . '/common_helpers.php';
 
-require vkExUnit_get_directory() . '/plugins/sitemap_page/sitemap_page.php';
+//require vkExUnit_get_directory() . '/plugins/sitemap_page/sitemap_page.php';
 require vkExUnit_get_directory() . '/plugins/dashboard_info_widget/dashboard-info-widget.php';
 
 
@@ -117,6 +117,13 @@ if ( isset($options['active_auto_eyecatch']) && $options['active_auto_eyecatch']
 
 if ( isset($options['active_childPageIndex']) && $options['active_childPageIndex'] )
 	require vkExUnit_get_directory() . '/plugins/child_page_index/child_page_index.php';
+	
+if ( isset($options['active_sitemap_page']) && $options['active_sitemap_page'] )
+	require vkExUnit_get_directory() . '/plugins/sitemap_page/sitemap_page.php';
+
+// page custom field	
+if ( isset($options['active_childPageIndex']) && $options['active_childPageIndex'] || isset($options['active_sitemap_page']) && $options['active_sitemap_page'] )
+	require vkExUnit_get_directory() . '/plugins/page_custom_field.php';
 
 /*-------------------------------------------*/
 /*	Add vkExUnit css
