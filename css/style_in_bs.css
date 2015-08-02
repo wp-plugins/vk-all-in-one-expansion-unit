@@ -614,6 +614,8 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 /*-------------------------------------------*/
 /* childPageIndex Plugin
 /*-------------------------------------------*/
+/* sitemap page Plugin
+/*-------------------------------------------*/
 /*-------------------------------------------*/
 /* .common
 /*-------------------------------------------*/
@@ -695,7 +697,17 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 /*-------------------------------------------*/
 /* Profile wiget Plugin
 /*-------------------------------------------*/
-.profile_media { display: block; overflow: hidden; margin: 0.8em auto; max-width: 100px; border-radius: 100px; }
+.site-profile { overflow: hidden; }
+
+.profile_media { display: block; margin: 0.8em auto; max-width: 100%; }
+
+.media_round { border-radius: 50%; }
+
+.media_left .profile_media { margin-left: 0; }
+
+.media_float { float: left; padding-right: 10px; }
+.media_float .profile_media { margin: 0.8em 0 0; }
+.media_float + .profile_text { padding-top: 0.8em; }
 
 .profile_text { margin-bottom: 0.5em; font-size: 14px; }
 
@@ -716,7 +728,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 /* 3PR area wiget Plugin
 /*-------------------------------------------*/
 .prBox .subSection-title { font-size: 18px; }
-.prBox .media_pr { margin-bottom: 0.5em; }
+.prBox .media_pr { margin-top: 0.8em; margin-bottom: 0.8em; }
 .prBox .media_pc { display: block; }
 .prBox .media_sp { display: none; }
 .prBox .summary { margin-bottom: 0.5em; font-size: 14px; line-height: 1.4em; }
