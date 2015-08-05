@@ -15,11 +15,15 @@
 /*-------------------------------------------*/
 /* .socialSet
 /*-------------------------------------------*/
-/* Profile wiget Plugin
+/* Wiget Profile  Plugin
 /*-------------------------------------------*/
-/* 3PR area wiget Plugin
+/* Wiget 3PR area Plugin
+/*-------------------------------------------*/
+/* Widget Page Content
 /*-------------------------------------------*/
 /* childPageIndex Plugin
+/*-------------------------------------------*/
+/* sitemap page Plugin
 /*-------------------------------------------*/
 
 /*-------------------------------------------*/
@@ -27,6 +31,11 @@
 /*-------------------------------------------*/
 
 .link-list li { padding:0.5em; }
+.widget { 
+  .subSection-title { font-size:18px; }
+}
+
+
 
 /*-------------------------------------------*/
 /* .autoEyeCatchBox
@@ -130,16 +139,29 @@
 }
 
 /*-------------------------------------------*/
-/* Profile wiget Plugin
+/* Wiget Profile  Plugin
 /*-------------------------------------------*/
-.profile_media{
-	display:block; overflow:hidden;
-	margin: 0.8em auto;
-	max-width: 100px;
-	border-radius: 100px;
+.site-profile{
+	overflow: hidden;
 }
-.site-profile {
-
+.profile_media{
+	display:block; 
+	margin: 0.8em auto;
+	max-width: 100%;
+}
+.media_round{
+	border-radius: 50%;
+}
+.media_left .profile_media{ margin-left:0; }
+.media_float{
+	float: left;
+	padding-right: 10px;
+	.profile_media{
+		margin: 0.8em 0 0;
+	}
+	&+.profile_text{
+		padding-top: 0.8em;
+	}
 }
 .profile_text{
     margin-bottom: 0.5em;
@@ -212,14 +234,15 @@
     }
 }
 /*-------------------------------------------*/
-/* 3PR area wiget Plugin
+/* Wiget 3PR area Plugin
 /*-------------------------------------------*/
 .prBox{
 	.subSection-title{
 		font-size: 18px;
 	}
 	.media_pr{
-		margin-bottom: 0.5em;
+		margin-top: 0.8em;
+		margin-bottom: 0.8em;
 	}
 	.media_pc{
 		display: block;
@@ -251,6 +274,12 @@
 	} 
 }	
 }
+
+/*-------------------------------------------*/
+/* Widget Page Content
+/*-------------------------------------------*/
+.widget_pageContent h1 { margin-bottom:20px; }
+
 /*-------------------------------------------*/
 /* childPageIndex Plugin
 /*-------------------------------------------*/
@@ -263,7 +292,7 @@
 .childPage_list_box{
 	position: relative;
 	margin-bottom: 2.5em;
-		.childPage_list_title{
+	.childPage_list_title{
 		font-size: 16px;
 		line-height: 1.4;
 	}
@@ -319,4 +348,5 @@
 		padding: 0;
 	}
 }
+
 
