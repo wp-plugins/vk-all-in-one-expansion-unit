@@ -22,12 +22,14 @@ function vkExUnit_render_main_config(){
 	vkExUnit_save_main_config();
 ?>
 <div class="wrap vkExUnit_admin_page">
+<div class="adminMain">
 <form method="post" action="">
 
 <?php 
 	wp_nonce_field( 'standing_on_the_shoulder_of_giants', '_nonce_vkExUnit' );
 
 	global $vkExUnit_options;
+	if( is_array($vkExUnit_options) ):
 	foreach($vkExUnit_options as $vkoption){
 		if(!isset($vkoption['render_page'])){ continue; }
 		
@@ -45,7 +47,17 @@ function vkExUnit_render_main_config(){
 ?>
 
 <?php submit_button(); ?>
+<?php else:
+
+_e('Activated Packages is noting. please activate some package.', 'vkExUnit');
+
+ endif; ?>
 </form>
+</div><!-- [ /.adminMain ] -->
+<div class="adminSub">
+<div class="exUnit_infoBox"><?php vkExUnit_news_body(); ?></div>
+<div class="exUnit_adminBnr"><?php vkExUnit_admin_banner(); ?></div>
+</div><!-- [ /.adminSub ] -->
 </div>
 <?php
 }
