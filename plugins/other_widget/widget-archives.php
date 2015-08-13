@@ -20,19 +20,22 @@ class WP_Widget_VK_archive_list extends WP_Widget {
 			'echo' => 1,
 			);
 
-		if($instance['display_type'] == 'y'){
+		if(isset($instance['display_type']) && $instance['display_type'] == 'y'){
 			$arg['type']      = "yearly";
-			$arg['post_type'] = $instance['post_type'];
-			$arg['after']     = '年';
+			$arg['post_type'] = ( isset($instance['post_type']) ) ? $instance['post_type'] : 'post';
+			if (strtoupper(get_locale()) == 'JA'){
+				$arg['after']     = '年';
+			}
 		}
 		else{
 			$arg['type']      = "monthly";
-			$arg['post_type'] = $instance['post_type'];
+			$arg['post_type'] = ( isset($instance['post_type']) ) ? $instance['post_type'] : 'post';
 		}
-
 	?>
 	<aside class="widget sideWidget widget_archive">
-		<h1 class="widget-title subSection-title"><?php echo $instance['label']; ?></h1>
+	<?php if( (isset($instance['label'])) && $instance['label'] ){ ?>
+	<h1 class="widget-title subSection-title"><?php echo $instance['label']; ?></h1>
+	<?php } ?>
 		<ul class="localNavi">
 			<?php wp_get_archives($arg); ?>
 		</ul>
@@ -67,8 +70,10 @@ class WP_Widget_VK_archive_list extends WP_Widget {
 		<br/>
 		<label for="<?php echo $this->get_field_id('display_type'); ?>">表示タイプ</label>
 		<select name="<?php echo $this->get_field_name('display_type'); ?>" >
-			<option value="m" <?php if($instance['display_type'] != "y") echo 'selected="selected"'; ?> >月別</option>
-			<option value="y" <?php if($instance['display_type'] == "y") echo 'selected="selected"'; ?> >年別</option>
+			<option value="m" <?php if($instance['display_type'] != "y") echo 'selected="selected"'; ?> >
+			<?php _e('Monthly','vkExUnit');?></option>
+			<option value="y" <?php if($instance['display_type'] == "y") echo 'selected="selected"'; ?> >
+			<?php _e('Yearly','vkExUnit');?></option>
 		</select>
 		</p>
 		<script type="text/javascript">
@@ -81,12 +86,12 @@ class WP_Widget_VK_archive_list extends WP_Widget {
 						echo 'post_labels["'.$page.'"] = "'.$page_labl->labels->name.'";';
 					}
 				}
-				echo 'post_labels["blog"] = "ブログ";'."\n";
+				echo 'post_labels["blog"] = "Blog";'."\n";
 			?>
 			var posttype = jQuery("[name=\"<?php echo $this->get_field_name('post_type'); ?>\"]");
 			var lablfeld = jQuery("[name=\"<?php echo $this->get_field_name('label'); ?>\"]");
 			posttype.change(function(){
-				lablfeld.val(post_labels[posttype.val()]+'アーカイブ');
+				lablfeld.val(post_labels[posttype.val()]+'<?php _e('archive','vkExUnit');?>');
 			});
 		});
 		</script>
