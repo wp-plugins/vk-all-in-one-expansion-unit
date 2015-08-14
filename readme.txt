@@ -4,7 +4,7 @@ Donate link:
 Tags: Google Analytics, New posts, Related Posts, sitemap, sns, twitter card, Facebook Page Plugin, OG tags,
 Requires at least: 4.2
 Tested up to: 4.2
-Stable tag: 0.1.6.1
+Stable tag: 2.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -16,24 +16,25 @@ This plug-in is an integrated plug-in with a variety of features that make it po
 
 Many features can be stopped individually.
 
-## Powerful　Widgets
+[ Powerful　Widgets ]
 
 *   Recent Posts - display the link text and the date of the latest article title.
 *   Page content to widget - display the contents of the page to the widgets.
 *   Profile - display the profile entered in the widget.
 *   FB Page Plugin - display the Facebook Page Plugin.
 *   3PR area - display the 3PR area.
+*   PR Blocks - display the PR Blocks.
 *   Categories/tags list - Displays a categories, tags or format list.
 *   Archive list - Displays a list of archives. You can choose the post type and also to display archives by month or by year.
 *   Facebook Page Plugin widget
 
-## Social media 
+[ Social media ]
 
 *   Print Social Bookmarks
 *   Print OG Tags
 *   Print Twitter Card Tags
 
-## Others
+[ Others ]
 
 *   Print Google Analytics tag
 *   Print meta keyword tag
@@ -43,7 +44,6 @@ Many features can be stopped individually.
 *   Insert Child page List to page
 *   Insert Auto HTML Site Map
 *	Automatic Eye Catch insert
-
 
 and more.
 
@@ -67,6 +67,27 @@ e.g.
 2. This is an example of SNS cooperation setting screen.
 
 == Changelog ==
+
+= 2.0.0 =
+* [ Add functions ] Insert Ads to contents.
+* [ Add functions ] New PR Blocks Widget.
+* [ Add functions ] Display contact infomation to contents of bottom.
+* [ bug fix ] Translation leakage
+
+= 1.0.0 =
+* [ Add functions ] Insert ads to post contents.
+* [ Add functions ] Heading of "Follow me box" can now be changed.
+* [ Add functions ] Added the setting of share and OG page title.
+* [ bug fix ] Translation leakage
+
+= 0.1.6.6 =
+* Profile Widget bug fix.
+
+= 0.1.6.4 =
+* Child Page Index page order bug fix.
+
+= 0.1.6.3 =
+* Profile Widget & Child Page Index bug fix.
 
 = 0.1.6.0 =
 * Add HTML auto sitemap.
